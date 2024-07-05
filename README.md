@@ -1,5 +1,7 @@
 # Flambus
 ![로고2](https://github.com/dltldud2kr/app/assets/105353307/4652baf4-ca1d-4f1c-8f55-cea962b5af95)
+![로고](https://github.com/dltldud2kr/app/assets/105353307/5322ad3d-cc2f-4978-9f08-41c3663826ab)
+
 
 ## ⚙️환경세팅
  - spring boot 2.7.8
