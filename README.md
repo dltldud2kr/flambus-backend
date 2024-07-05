@@ -49,11 +49,12 @@
 
 ## **🖼️ Sample Screen**
 <img src="https://github.com/dltldud2kr/app/assets/105353307/8e4ad04e-56e5-4403-bcdf-ddeceb64dff5" alt="면메인화" width="200px" height="390px">
-![메인화면3](https://github.com/dltldud2kr/app/assets/105353307/ceb7e2dd-eda6-45ed-9aee-f336c70717e4)
-![메이노하면5](https://github.com/dltldud2kr/app/assets/105353307/e0b356da-3b49-4148-b407-0a62bced4bf8)
-![메인화면4](https://github.com/dltldud2kr/app/assets/105353307/e4d695c6-8f4e-45c4-9f31-65e09b315e03)
-![리뷰1](https://github.com/dltldud2kr/app/assets/105353307/3d45e3e0-8371-4751-b040-daac159ddef3)
-![프로필](https://github.com/dltldud2kr/app/assets/105353307/3e386309-b226-415c-b731-ebaeae643783)
+<img src="https://github.com/dltldud2kr/app/assets/105353307/ceb7e2dd-eda6-45ed-9aee-f336c70717e4" alt="면메인화" width="200px" height="390px">
+<img src="https://github.com/dltldud2kr/app/assets/105353307/e0b356da-3b49-4148-b407-0a62bced4bf8" alt="면메인화" width="200px" height="390px">
+<img src="https://github.com/dltldud2kr/app/assets/105353307/e4d695c6-8f4e-45c4-9f31-65e09b315e03" alt="면메인화" width="200px" height="390px">
+<img src="https://github.com/dltldud2kr/app/assets/105353307/3d45e3e0-8371-4751-b040-daac159ddef3" alt="면메인화" width="200px" height="390px">
+<img src="https://github.com/dltldud2kr/app/assets/105353307/3e386309-b226-415c-b731-ebaeae643783" alt="면메인화" width="200px" height="390px">
+
 
 ---
 
