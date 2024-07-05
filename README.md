@@ -1,12 +1,21 @@
 # Flambus
 ![로고2](https://github.com/dltldud2kr/app/assets/105353307/4652baf4-ca1d-4f1c-8f55-cea962b5af95)
 
-## 환경세팅
+## ⚙️환경세팅
  - spring boot 2.7.8
  - mariadb 2.4.1
  - sourceCompatibility 1.8
 
-## 프로젝트 개요
+---
+
+### **👨‍👨‍👧‍👦 팀원 소개 **
+- Backend : **이시영**
+- Frontend : 최성우
+- Designer : 황현우, 최지원, 이주석
+
+---
+
+## 📝프로젝트 개요
 
 ### 프로젝트 목표
 신뢰성 높은 맛집 정보를 제공하는 애플리케이션 개발
@@ -29,8 +38,30 @@
 ### 기대 효과 
 사용자 리뷰의 신뢰성 향상 및 리뷰 작성 참여율 증가
 
+---
 
 
- 📒 API DOCUMENT 
+## 📒 API DOCUMENT 
  
  - http://explorer-cat-api.p-e.kr:2000/swagger-ui/index.html#/
+
+---
+
+## **🖼️ Sample Screen**
+
+![메인화면](https://github.com/dltldud2kr/app/assets/105353307/8e4ad04e-56e5-4403-bcdf-ddeceb64dff5)
+![메인화면3](https://github.com/dltldud2kr/app/assets/105353307/ceb7e2dd-eda6-45ed-9aee-f336c70717e4)
+![메이노하면5](https://github.com/dltldud2kr/app/assets/105353307/e0b356da-3b49-4148-b407-0a62bced4bf8)
+![메인화면4](https://github.com/dltldud2kr/app/assets/105353307/e4d695c6-8f4e-45c4-9f31-65e09b315e03)
+![리뷰1](https://github.com/dltldud2kr/app/assets/105353307/3d45e3e0-8371-4751-b040-daac159ddef3)
+![프로필](https://github.com/dltldud2kr/app/assets/105353307/3e386309-b226-415c-b731-ebaeae643783)
+
+---
+
+
+## 🗂ERD
+
+![ERD](https://github.com/dltldud2kr/app/assets/105353307/4955fcd7-19c3-46ba-aa08-2f1f0dd79966)
+
+
+---
