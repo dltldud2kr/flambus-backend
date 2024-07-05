@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="flambus.app.mapper.ReviewMapper">
+
+    <!-- 해당 가게에서 제일 많은 태그 정보 찾아오기. -->
+    <!--    flambus.app.dto.review.ReviewResponse$JournalTag -->
+    <select id="selectList" parameterType="java.lang.Long" resultType="java.util.Map">
+        SELECT B.review_idx , B.tag_idx
+        , C.tag_name
+        FROM review_tag B
+        , review_tag_type C
+        WHERE B.tag_idx = C.idx
+        AND B.store_idx = #{storeIdx}
+        ORDER BY B.review_idx
+    </select>
+
+
+    <select id="findMostLikeReview" parameterType="java.lang.Long" resultType="java.util.Map">
+        SELECT r.*, s.*, COALESCE(like_count, 0) AS like_count
+        FROM store s
+        LEFT JOIN review r ON s.idx = r.store_idx
+        LEFT JOIN (
+        SELECT review_idx, COUNT(*) AS like_count
+        FROM review_like
+        GROUP BY review_idx
+        ) review_likes ON r.idx = review_likes.review_idx
+        WHERE s.idx = #{storeIdx}
+        ORDER BY like_count DESC, r.created DESC
+        LIMIT 1;
+
+
+    </select>
+
+
+
+
+</mapper>

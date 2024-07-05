@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="flambus.app.mapper.StoreMapper">
+
+    <!-- 해당 가게에서 제일 많은 태그 정보 찾아오기. -->
+    <select id="findMostUsedTagIdx" resultType="Long">
+        SELECT tag_idx
+        FROM review_tag
+        WHERE store_idx = #{storeIdx}
+        GROUP BY tag_idx
+        ORDER BY COUNT(*) DESC
+        LIMIT 1
+    </select>
+
+    <select id="getMapStoreMarker" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT store.*, COUNT(review.store_idx) AS review_count,
+        IF(MAX(IF(review.member_idx = #{memberIdx}, 1, 0)) = 1, true, false) AS has_review
+        FROM store
+        LEFT JOIN review ON store.idx = review.store_idx
+        GROUP BY store.idx
+    </select>
+
+    <insert id="createStore" parameterType="flambus.app.dto.store.CreateStoreDto">
+        INSERT INTO store (member_idx, name, address, contact_number, introduce, created, updated)
+        VALUES (#{memberIdx}, #{storeName}, #{address}, #{contactNumber}, #{introduce}, #{created, jdbcType=TIMESTAMP}, #{updated, jdbcType=TIMESTAMP})
+    </insert>
+
+
+
+</mapper>

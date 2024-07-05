@@ -1,0 +1,65 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.14'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'flambus'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = "11"
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+
+	//gson
+	implementation 'com.google.code.gson:gson:2.10.1'
+	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+
+	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.4.1'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.3'
+	implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+	// smtp gmail email
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	// MyBatis
+	implementation group: 'com.oracle.database.jdbc', name: 'ojdbc11', version: '21.8.0.0'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0'
+// https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter
+//	implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
+//	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.11'
+	// jwt 사용
+	implementation("io.jsonwebtoken:jjwt-api:0.11.2")
+	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.2")
+	implementation("io.jsonwebtoken:jjwt-jackson:0.11.2")
+}
+
+
+//build시 plan.jar은 빌드에서 제거합니다.
+jar {
+	enabled = false
+}
+
+tasks.named('test') {
+//	useJUnitPlatform()
+}
+targetCompatibility = JavaVersion.VERSION_11

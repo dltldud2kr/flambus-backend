@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="flambus.app.mapper.StoreJjimMapper">
+
+    <select id="findByMemberIdxAndStoreIdx" parameterType="java.util.Map" resultType="flambus.app.entity.StoreJjim">
+        SELECT * FROM store_jjim
+        WHERE member_idx = #{memberIdx}
+        AND store_idx = #{storeIdx}
+    </select>
+
+    <delete id="deleteByMemberIdxAndStoreIdx" parameterType="java.util.Map">
+        DELETE FROM store_jjim
+        WHERE member_idx = #{memberIdx}
+        AND store_idx = #{storeIdx}
+    </delete>
+
+</mapper>
